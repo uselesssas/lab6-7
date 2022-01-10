@@ -1,0 +1,13 @@
+<%= form_with url: mark_lab_path(@lab) do |f| %>
+  <% if @lab.errors.any?%>
+    <% @lab.errors.full_messages.each do |msg| %>
+    <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+  <% end %>
+
+  <h4>Grade</h4>
+    <%= f.text_field :grade, {:class => 'form-control'} %><br>
+
+    <%= f.submit({:class => 'btn btn-outline-success'}) %>
+    <button type="button" class="btn btn-outline-secondary"><%= link_to "Back", root_path %></button>
+<% end %>
