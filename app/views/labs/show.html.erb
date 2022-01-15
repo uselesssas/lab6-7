@@ -4,3 +4,5 @@
 
 <button type="button" class="btn btn-outline-warning"><%= link_to "Edit", edit_lab_path(@lab) %></button>
 <button type="button" class="btn btn-outline-secondary"><%= link_to "Back", labs_path %></button>
+<br/><br/>
+<%= button_to "Delete", lab_path(@lab), method: :delete, class:"btn btn-outline-danger" %>

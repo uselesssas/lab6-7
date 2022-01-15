@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-outline-success"><%= link_to "Upload laboratory work", new_lab_path%></button><br><br>
+<button type="button" class="btn btn-outline-warning"><%= link_to "Upload laboratory work", new_lab_path%></button><br><br>
 
 <% flash.each do |type, msg| %>
   <div class="alert alert-<%= type %>">
@@ -19,10 +19,8 @@
         <td><%= lab.title %></td>
         <td><%= lab.description %></td>
         <td><%= lab.grade %></td>
-        <td><button type="button" class="btn btn-outline-warning"><%= link_to "Edit", edit_lab_path(lab) %></button></td>
         <td><button type="button" class="btn btn-outline-primary"><%= link_to "Show", lab_path(lab) %></button></td>
-        <td><button type="button" class="btn btn-outline-info"><%= link_to "Grade", mark_lab_path(lab) %></button></td>
-        <td><button type="button" class="btn btn-outline-danger"><%= link_to "Delete", lab_path(lab), method: :delete, data: {confirm: "Are you sure?"} %></button></td>
+        <td><button type="button" class="btn btn-outline-success"><%= link_to "Grade", mark_lab_path(lab) %></button></td>
       </tr>
     <% end %>
   </tbody>

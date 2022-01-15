@@ -40,6 +40,7 @@ class LabsController < ApplicationController
   end
 
   def destroy
+    @lab = Lab.find params[:id]
     @lab.destroy
 
     redirect_to action: :index
